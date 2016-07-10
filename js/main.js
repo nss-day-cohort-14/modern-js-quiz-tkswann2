@@ -1,3 +1,3 @@
 'use strict';
-const types = require('./robotTypes');
+const types = require('./robotClass');
 
