@@ -38,7 +38,7 @@ let customOpts = {
 let opts = Object.assign({}, watchify.args, customOpts);
 let bundler = watchify(browserify(opts)); 
 bundler.on('update', bundle); // on any dep update, runs the bundler
-bundler.on('log', gutil.log); // output build logs to terminal
+// bundler.on('log', gutil.log); // output build logs to terminal
 
 function bundle() {
   return bundler.bundle()
@@ -70,8 +70,7 @@ gulp.task('lint', function() {
 
 /*
   TAPE SECTION
-
-  */
+*/
 
 // gulp.task('test', function() {
 //   return gulp.src('./js/spec/*pec.js')

@@ -3,22 +3,22 @@ const Robot = require('./robotPrototype');
 const rndNum = require('./rndNum');
 
 
-function Drone () {
-	Robot.call(this);
+function Drone (name) {
+	Robot.call(this, name);
 	this.type = 'drone';
 	this.health -= 20;
 	this.evasionChance = rndNum(45,65);
 }
 
-function Humvee () {
-	Robot.call(this);
+function Humvee (name) {
+	Robot.call(this, name);
 	this.type = 'humvee';
 	this.armor += 25;
-	this.hitSpeed -= 200;
+	this.hitSpeed += 200;
 }
 
-function Transformer () {
-	Robot.call(this);
+function Transformer (name) {
+	Robot.call(this, name);
 	this.type = 'transformer';
 	this.health += 30;
 	this.damage += 20;
