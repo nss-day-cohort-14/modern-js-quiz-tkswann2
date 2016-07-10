@@ -3,12 +3,6 @@ const test = require('tape');
 const Robot = require('../robotPrototype');
 const Types = require('../robotTypes');
 
-const rndNum = (little, big) => {
-    let num1 = little || 0,
-            num2 = big || 100;
-    return Math.floor(Math.random() * (num2 - num1 + 1)) + num1;
-};
-
 test('Robot constructor: ', function (t) {
 	let testRobot = new Robot();
 
