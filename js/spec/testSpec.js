@@ -225,7 +225,7 @@ test('Robot Bonus: Health', function (t) {
 	let testBonus = new Bonus.Health();
 
 	t.equal(testBonus.bonusType, 'health +25', 'should have a bonusType defined as health +25');
-	t.equal(testBonus.health, 25, 'should increase health by 25')
+	t.equal(testBonus.health, 25, 'should increase health by 25');
 
 	t.end();
 });
@@ -234,7 +234,7 @@ test('Robot Bonus: Armor', function (t) {
 	let testBonus = new Bonus.Armor();
 
 	t.equal(testBonus.bonusType, 'armor +25', 'should have a bonusType defined as armor +25');
-	t.equal(testBonus.armor, 25, 'should increase armor by 25')
+	t.equal(testBonus.armor, 25, 'should increase armor by 25');
 
 	t.end();
 });
@@ -243,7 +243,7 @@ test('Robot Bonus: Damage', function (t) {
 	let testBonus = new Bonus.Damage();
 
 	t.equal(testBonus.bonusType, 'damage +25', 'should have a bonusType defined as damage +25');
-	t.equal(testBonus.damage, 25, 'should increase damage by 25')
+	t.equal(testBonus.damage, 25, 'should increase damage by 25');
 
 	t.end();
 });
@@ -252,7 +252,7 @@ test('Robot Bonus: HitSpeed', function (t) {
 	let testBonus = new Bonus.HitSpeed();
 
 	t.equal(testBonus.bonusType, 'hit speed increase by 25%', 'should have a bonusType defined as hit speed increase by 25%');
-	t.equal(testBonus.hitSpeed, -250, 'should increase hitSpeed by 25%')
+	t.equal(testBonus.hitSpeed, -250, 'should increase hitSpeed by 25%');
 
 	t.end();
 });
@@ -261,7 +261,7 @@ test('Robot Bonus: Evasion', function (t) {
 	let testBonus = new Bonus.Evasion();
 
 	t.equal(testBonus.bonusType, 'evasion chance increase by 15%', 'should have a bonusType defined as evasion chance increase by 15%');
-	t.equal(testBonus.evasionChance, 15, 'should increase evasionChance by 15%')
+	t.equal(testBonus.evasionChance, 15, 'should increase evasionChance by 15%');
 
 	t.end();
 });
