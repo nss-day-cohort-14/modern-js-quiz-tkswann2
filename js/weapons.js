@@ -6,7 +6,7 @@ Weapons.hellFireMissiles = function () {
 	this.weaponType = 'hellfire missiles';
 	this.damage = 10;
 	this.hitSpeed = -200;
-};
+}; 
 
 Weapons.Cannon = function () {
 	this.weaponType = 'cannon';
