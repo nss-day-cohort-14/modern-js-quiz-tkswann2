@@ -21,8 +21,10 @@ function Humvee () {
 }
 
 function Transformer () {
-	
+	Robot.call(this);
+	this.health += 30;
+	this.damage += 20;
 }
 
-module.exports = {Drone, Humvee};
+module.exports = {Drone, Humvee, Transformer};
 
