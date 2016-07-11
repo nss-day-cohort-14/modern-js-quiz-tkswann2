@@ -9,7 +9,15 @@ test.weapon = new Weapons.hellFireMissiles();
 test.bonus = new Bonus.Health();
 
 let test2 = new Class.Attack('Mary');
-test2.weapon = new Weapons.Laser();
-test2.bonus = new Bonus.Armor();
+test2.setWeapon(new Weapons.Laser());
+test2.setBonus(new Bonus.Armor());
+
+console.log("test", test.toString());
+console.log("test2", test2);
+console.log("test2", test2.toString());
+
+
+
+
 
 

@@ -1,13 +1,12 @@
 'use strict';
 const Robot = require('./robotPrototype');
-const rndNum = require('./rndNum');
-
+const HF = require('./helperFunctions');
 
 function Drone (name) {
 	Robot.call(this, name);
 	this.type = 'drone';
 	this.health -= 20;
-	this.evasionChance = rndNum(45,65);
+	this.evasionChance = HF.rndNum(45,65);
 }
 
 function Humvee (name) {

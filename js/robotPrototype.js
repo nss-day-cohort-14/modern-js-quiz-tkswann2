@@ -1,4 +1,6 @@
 'use strict';
+const HF = require('./helperFunctions');
+
 
 function Robot (name) {
 	this.name = name || null;
@@ -7,22 +9,32 @@ function Robot (name) {
 	this.damage = 10;
 	this.hitSpeed = 1000;
 
-	this.toString = function() {
-    var output = [this.name,
-      ": a ",
+	this.toString = () => {
+    let output = [this.name,
+      ": ",
+      (HF.firstLetterIsVowel(this.class)) ? 'an ' : 'a ',
       this.class,
       " class ",
       this.type,
       " with ",
       this.health,
       " health. ",
-      " Wielding a ",
+      " Sporting a ",
       this.weapon.weaponType,
       " & an added ",
-      this.bonus.bonusType,
-      " bonus!"
+      HF.splitString(this.bonus.bonusType)[1],
+      " bonus ",
+      HF.splitString(this.bonus.bonusType)[0]
     ].join("");
     return output;
+  };
+  
+  this.setWeapon = function (newWeapon) {
+  	this.weapon = newWeapon;
+  };
+
+  this.setBonus = function (newBonus) {
+  	this.bonus = newBonus;
   };
 }
 
