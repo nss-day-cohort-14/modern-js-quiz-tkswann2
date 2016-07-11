@@ -6,13 +6,15 @@ const rndNum = (little, big) => {
     return Math.floor(Math.random() * (num2 - num1 + 1)) + num1;
 };
 
+const totalStats = (dmg1, dmg2) => dmg1 + dmg2;
+
 const firstLetterIsVowel = (string) => {
 	const arr = ['a','e','i','o','u'];
-	let vowel = null;
-	string = string.split('')[0];
-	arr.forEach(v => {
-		if (v === string) vowel = true;
-	});
+	let vowel = false,
+			firstLetter = string.split('')[0];
+			arr.forEach(v => {
+				if (v === firstLetter) vowel = true;
+			});
 	return vowel;
 };
 
@@ -22,4 +24,4 @@ const splitString = (string) => {
 };
 
 
-module.exports = {firstLetterIsVowel, splitString, rndNum};
+module.exports = {firstLetterIsVowel, splitString, rndNum, totalStats};

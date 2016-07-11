@@ -4,10 +4,42 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
+	<article class="battleground">
+		<header id="bgHeader">
+			<h1>Welcome to Robot BattleDome!</h1>
+			<h4>Iiiiiiiiiiiiit's Tiiiiiiime!!</h4>
+		</header>
+		<section id="infoSection">
+			<div class="robotBox" id="box-01">
+				<label for="fighter1">Name  your fighter:&nbsp;&nbsp;<input type="text" id"fighter1" placeholder="e.g. Brock McLargeHuge" /></label>
+				<select name="classSelect1" id="classSelect1" class="selectBox">
+					<option value="" selected disabled>Select Your Bot!</option>
+					<optgroup label="Drone">
+						<option value="stealth">Stealth</option>
+						<option value="attack">Attack</option>
+					</optgroup>
+				</select>
+			</div>
+			<div class="robotBox" id="box-02">
+				<p>There is only one rule: 2 robots go in, only 1 comes out.</p>
+			</div>
+			<div class="robotBox" id="box-03">
+				<label for="fighter2">Name  your fighter:&nbsp;&nbsp;<input type="text" id"fighter2" placeholder="e.g. Stan Levitan" /></label>
+				<select name="classSelect2" id="classSelect2" class="selectBox">
+					<option value="" selected disabled>Select Your Bot!</option>
+					<optgroup label="Drone">
+						<option value="stealth">Stealth</option>
+						<option value="attack">Attack</option>
+					</optgroup>
+				</select>
+			</div>
+		</section>
+		<footer id="bgFooter"></footer>
+	</article>
 	<script src="dist/bundle.js"></script>
 </body>
 </html>
