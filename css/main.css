@@ -1,0 +1,17 @@
+.battleground {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	text-align: center;
+}
+
+#infoSection {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+}
+
+.robotBox {
+	width: 30%;
+	border: 5px dotted magenta;
+}
