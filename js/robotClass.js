@@ -7,8 +7,8 @@ function Stealth (name) {
 	Types.Drone.call(this, name);
 	this.health += rndNum(15,25);
 	this.class = 'stealth';
-	this.evasionChance += 10;
-	this.damage -= rndNum(1,10);
+	this.evasionChance += rndNum(5,15);
+	this.damage -= rndNum(2,10);
 	this.weapon = null;
 	this.bonus = null;
 }
@@ -18,7 +18,7 @@ function Attack (name) {
 	this.health += rndNum(18,28);
 	this.class = 'attack';
 	this.hitSpeed -= 200;
-	this.damage += rndNum(10,20);
+	this.damage += rndNum(15,25);
 	this.weapon = null;
 	this.bonus = null;
 }
@@ -30,7 +30,7 @@ function Transport (name) {
 	this.health += rndNum(20,30);
 	this.class = 'transport';
 	this.armor += 30;
-	this.damage -= rndNum(1,10);
+	this.damage -= rndNum(2,10);
 	this.weapon = null;
 	this.bonus = null;
 }
@@ -68,19 +68,6 @@ function Optimus (name) {
 	this.weapon = null;
 	this.bonus = null;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,39 +1,40 @@
 'use strict';
+const rndNum = require('./rndNum');
 
 const Weapons = {};
 
 Weapons.hellFireMissiles = function () {
 	this.weaponType = 'hellfire missiles';
-	this.damage = 10;
+	this.damage = rndNum(5,15);
 	this.hitSpeed = -200;
 }; 
 
 Weapons.Cannon = function () {
 	this.weaponType = 'cannon';
-	this.damage = 40;
+	this.damage = rndNum(35,45);
 	this.hitSpeed = 200;
 };
 
 Weapons.Laser = function () {
 	this.weaponType = 'laser';
-	this.damage = 12;
+	this.damage = rndNum(3,12);
 	this.hitSpeed = -300;
 };
 
 Weapons.FiftyCal = function () {
 	this.weaponType = 'fifty cal';
-	this.damage = 5;
+	this.damage = rndNum(8,16);
 	this.hitSpeed = -150;
 };
 
 Weapons.Chainsaw = function () {
 	this.weaponType = 'chainsaw';
-	this.damage = 15;
+	this.damage = rndNum(5,10);
 };
 
 Weapons.BattleAxe = function () {
 	this.weaponType = 'battleaxe';
-	this.damage = 12;
+	this.damage = rndNum(6,12);
 };
 
 
