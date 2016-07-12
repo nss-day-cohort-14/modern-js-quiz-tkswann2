@@ -54,7 +54,7 @@ select {
   display: inline-block;
   margin: 10px;
   font-size: 18px;
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-weight: 600;
   padding: 10px 5px;
   min-width: 260px;
