@@ -8,83 +8,50 @@ console.log("Class", Class);
 console.log("Weapons", Weapons);
 console.log("Bonus", Bonus);
 
+const playerChoices = {};
+let	  player1,
+			player2;
+
 // dynamically load weapon choices
 $('#classSelect1, #classSelect2')
 	.on('change', (e) => {
-		let htmlString = `<p>Select one:</p>`;
-		$.each(Weapons, (k,v) => {
-			htmlString += `<div class="card__button">`;
-			// different color list buttons for each select box
-			htmlString +=	(e.target.id === 'classSelect1') ? `<a class="card__link btn btn--small btn--yellow weapons" href="#">` : `<a class="card__link btn btn--small btn--blue weapons" href="#">`;
-	    htmlString += `<span class="btn__prompt">&raquo;</span>
-	      							    <span class="btn__text">${k}</span>
-	      							  </a>
-	      							</div>
-										</div>`;
-		});
-		
-	 if (e.target.id === 'classSelect1') {
-	  	$('#box-01').children(':not(label, select)').remove(); 
-	  	$('#box-01').append(htmlString);
-		// change color of selected box
-	  	$('.btn--yellow').on('click', (e) => {
-				$('.btn--yellow').removeClass('btn__select');
-				$(e.currentTarget).toggleClass('btn__select');
-			});
-	 }
-	 if (e.target.id === 'classSelect2') {
-	  	$('#box-03').children(':not(label, select)').remove();
-	  	$('#box-03').append(htmlString);
-		// change color of selected box
-	  	$('.btn--blue').on('click', (e) => {
-				$('.btn--blue').removeClass('btn__select');
-				$(e.currentTarget).toggleClass('btn__select');
-			});
-	 } 
-// prevent default action of dynamically created links
-	$('a').on('click', (e) => e.preventDefault());
-	
 });
 
-$('body').on('click', (e) => {
-
-	if (e.target.innerText === 'next') {
-		$('#classSelect1, #classSelect2').nextAll().remove();
-	}
-
+$('.next').on('mouseenter', (e) => {
+	playerChoices.p1Name = 	$('#fighter1').val();
+	playerChoices.p2Name = $('#fighter2').val();
+	playerChoices.p1Class = $('#classSelect1').val();
+	playerChoices.p2Class = $('#classSelect2').val();
 });
 
-// TO-DO
-//   load all options dynaically from start, hide/show as needed!!!!!
+$('.next').on('click', (e) => {
+	$.each(playerChoices, (k,v) => {
+		(v === 'Stealth') ? player1 = new Class[v](playerChoices.p1Name) : null;
+		console.log("player1", player1);
+	});
+});
 
+// $('.next').on('click', (e) => {
+// 		(playerChoices.p1Class === 'Stealth') ? player1 = new Class.Stealth(playerChoices.p1Name) : null;
+// 		(playerChoices.p1Class === 'Attack') ? player1 = new Class.Attack(playerChoices.p1Name) : null;
+// 		(playerChoices.p1Class === 'Transport') ? player1 = new Class.Transport(playerChoices.p1Name) : null;
+// 		(playerChoices.p1Class === 'Offensive') ? player1 = new Class.Offensive(playerChoices.p1Name) : null;
+// 		(playerChoices.p1Class === 'HalfTrack') ? player1 = new Class.HalfTrack(playerChoices.p1Name) : null;
+// 		(playerChoices.p1Class === 'Optimus') ? player1 = new Class.Optimus(playerChoices.p1Name) : null;
+
+// 		(playerChoices.p2Class === 'Stealth') ? player2 = new Class.Stealth(playerChoices.p2Name) : null;
+// 		(playerChoices.p2Class === 'Attack') ? player2 = new Class.Attack(playerChoices.p2Name) : null;
+// 		(playerChoices.p2Class === 'Transport') ? player2 = new Class.Transport(playerChoices.p2Name) : null;
+// 		(playerChoices.p2Class === 'Offensive') ? player2 = new Class.Offensive(playerChoices.p2Name) : null;
+// 		(playerChoices.p2Class === 'HalfTrack') ? player2 = new Class.HalfTrack(playerChoices.p2Name) : null;
+// 		(playerChoices.p2Class === 'Optimus') ? player2 = new Class.Optimus(playerChoices.p2Name) : null;
+// 		console.log("player1", player1);
+// 		console.log("player2", player2);
+// });
 
 $(function() {
 	console.log("document is ready");
 });
-
-
-// // IIFE - Immediately Invoked Function Expression
-//   (function(yourcode) {
-
-//     // The global jQuery object is passed as a parameter
-//   	yourcode(window.jQuery, window, document);
-
-//   }(function($, window, document) {
-
-//     // The $ is now locally scoped 
-
-//    // Listen for the jQuery ready event on the document
-//    $(function() {
-
-//      // The DOM is ready!
-
-//    });
-
-//    // The rest of the code goes here!
-
-//   }
-//   }));
-
 
 
 
