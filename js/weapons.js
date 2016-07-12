@@ -4,7 +4,7 @@ const HF = require('./helperFunctions');
 const Weapons = {};
 
 Weapons.hellFireMissiles = function () {
-	this.weaponType = 'hellfire';
+	this.weaponType = 'hellfire missiles';
 	this.damage = HF.rndNum(5,15);
 	this.hitSpeed = -200;
 }; 
