@@ -47,10 +47,43 @@ $('#classSelect1, #classSelect2')
 });
 
 $('body').on('click', (e) => {
+
 	if (e.target.innerText === 'next') {
 		$('#classSelect1, #classSelect2').nextAll().remove();
 	}
+
 });
+
+// TO-DO
+//   load all options dynaically from start, hide/show as needed!!!!!
+
+
+$(function() {
+	console.log("document is ready");
+});
+
+
+// // IIFE - Immediately Invoked Function Expression
+//   (function(yourcode) {
+
+//     // The global jQuery object is passed as a parameter
+//   	yourcode(window.jQuery, window, document);
+
+//   }(function($, window, document) {
+
+//     // The $ is now locally scoped 
+
+//    // Listen for the jQuery ready event on the document
+//    $(function() {
+
+//      // The DOM is ready!
+
+//    });
+
+//    // The rest of the code goes here!
+
+//   }
+//   }));
 
 
 
