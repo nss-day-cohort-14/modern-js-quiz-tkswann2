@@ -1,7 +1,6 @@
 'use strict';
 const HF = require('./helperFunctions');
 
-
 function Robot (name) {
 	this.name = name || null;
 	this.health = 50;

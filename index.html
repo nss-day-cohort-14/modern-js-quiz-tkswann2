@@ -11,29 +11,58 @@
 	<article class="battleground">
 		<header id="bgHeader">
 			<h1>Welcome to Robot BattleDome!</h1>
-			<h4>Iiiiiiiiiiiiit's Tiiiiiiime!!</h4>
+			<h4>There is only one rule: 2 robots go in, only 1 comes out.</h4>
 		</header>
 		<section id="infoSection">
 			<div class="robotBox" id="box-01">
-				<label for="fighter1">Name your fighter:&nbsp;&nbsp;<input type="text" id"fighter1" placeholder="Brock McLargeHuge" /></label>
+				<label for="fighter1">Name your fighter:&nbsp;&nbsp;<input type="text" id="fighter1" placeholder="Brock McLargeHuge" /></label>
 				<select name="classSelect1" id="classSelect1" class="selectBox">
-					<option value="" selected disabled>Select Your Bot!</option>
-					<optgroup label="Drone">
-						<option value="stealth">Stealth</option>
-						<option value="attack">Attack</option>
+						<option value="" selected disabled>Select Your Bot!</option>
+					<optgroup>
+						<optgroup label="Drone">
+							<option value="stealth">Stealth</option>
+							<option value="attack">Attack</option>
+						</optgroup>
+						<optgroup label="Humvee">
+							<option value="transport">Transport</option>
+							<option value="offensive">Offensive</option>
+						</optgroup>
+						<optgroup label="Transformer">
+							<option value="halftrack">Half-Track</option>
+							<option value="optimus">Optimus</option>
+						</optgroup>
 					</optgroup>
 				</select>
 			</div>
 			<div class="robotBox" id="box-02">
-				<p>There is only one rule: 2 robots go in, only 1 comes out.</p>
+				<p>1. Choose a name for each robot</p>
+				<p>2. Select a robot type</p>
+				<p>3. Pick your weapons &amp; bonuses</p>
+				<p>FIGHT TO THE DEATH</p>
+				<div class="card__button">
+      	  <a class="card__link btn btn--small btn--red" href="#">
+      	    <span class="btn__prompt">></span>
+      	    <span class="btn__text">Prepare to Fight</span>
+      	  </a>
+      	</div>
 			</div>
 			<div class="robotBox" id="box-03">
-				<label for="fighter2">Name your fighter:&nbsp;&nbsp;<input type="text" id"fighter2" placeholder="The Zodiac" /></label>
+				<label for="fighter2">Name your fighter:&nbsp;&nbsp;<input type="text" id="fighter2" placeholder="The Zodiac" /></label>
 				<select name="classSelect2" id="classSelect2" class="selectBox">
-					<option value="" selected disabled>Select Your Bot!</option>
-					<optgroup label="Drone">
-						<option value="stealth">Stealth</option>
-						<option value="attack">Attack</option>
+						<option value="" selected disabled>Select Your Bot!</option>
+					<optgroup>
+						<optgroup label="Drone">
+							<option value="stealth">Stealth</option>
+							<option value="attack">Attack</option>
+						</optgroup>
+						<optgroup label="Humvee">
+							<option value="transport">Transport</option>
+							<option value="offensive">Offensive</option>
+						</optgroup>
+						<optgroup label="Transformer">
+							<option value="half-track">Half-Track</option>
+							<option value="optimus">Optimus</option>
+						</optgroup>
 					</optgroup>
 				</select>
 			</div>

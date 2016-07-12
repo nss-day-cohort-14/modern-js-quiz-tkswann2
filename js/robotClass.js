@@ -59,6 +59,5 @@ function Optimus (name) {
 }
 
 
-
 module.exports = {Stealth, Attack, Transport, Offensive, HalfTrack, Optimus};
 
