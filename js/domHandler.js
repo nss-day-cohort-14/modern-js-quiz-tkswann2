@@ -5,9 +5,6 @@ const Weapons = require('./weapons');
 const Bonus = require('./bonus');
 const HF = require('./helperFunctions');
 
-console.log("Class", Class);
-console.log("Weapons", Weapons);
-console.log("Bonus", Bonus);
 
 const playerChoices = {};
 let	player1,
