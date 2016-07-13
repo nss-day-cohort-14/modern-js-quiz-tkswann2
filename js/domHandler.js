@@ -3,14 +3,17 @@ const $ = require('jquery');
 const Class = require('./robotClass');
 const Weapons = require('./weapons');
 const Bonus = require('./bonus');
+const HF = require('./helperFunctions');
 
 console.log("Class", Class);
 console.log("Weapons", Weapons);
 console.log("Bonus", Bonus);
 
-const playerChoices = {},
-		  player1,
-			player2;
+const playerChoices = {};
+let	player1,
+		player2,
+		counter = 0;
+
 
 
 // sets values on playerChoices obj to be used for building the bots
@@ -41,9 +44,18 @@ $('.next').on('click', (e) => {
 		$('#box-01, #box-02, #box-03').empty();
 	  // append attack button to 2nd div 
 		$('<div/>')
-			.addClass('card__button')
+			.addClass('card__button attackButton')
 			.html(`<a class="card__link btn btn--small btn--orange upperCase" href="#"><span class="btn__prompt">&raquo;</span><span class="btn__text">Attack</span></a>`)
-			.appendTo('#box-02');
+			.appendTo('#box-02')
+			.on('click', (e) => {
+				// alternate player attacks between clicks
+				if (counter % 2 === 0) {
+					HF.fightFunc(player1,player2);
+				} else {
+					HF.fightFunc(player2,player1);
+				}
+				counter++;
+			});
 		// populate outer divs with robot info
 		$('#box-01')
 			.html(`<p>${player1.toString()}</p>`);
@@ -56,6 +68,7 @@ $('.next').on('click', (e) => {
 $(function() {
 	console.log("document is ready");
 });
+
 
 
 

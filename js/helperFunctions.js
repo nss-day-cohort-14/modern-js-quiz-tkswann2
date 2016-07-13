@@ -1,4 +1,5 @@
 'use strict';
+const $ = require('jquery');
 
 const rndNum = (little, big) => {
     let num1 = little || 0,
@@ -23,5 +24,16 @@ const splitString = (string) => {
 	return newArr;
 };
 
+const calcDmg = (opp1, opp2) => {
+	opp2.health -= opp1.damage;
+	return opp2;
+};
 
-module.exports = {firstLetterIsVowel, splitString, rndNum, totalStats};
+const fightFunc = (opp1, opp2) => {
+		calcDmg(opp1, opp2);
+		if (opp2.health <= 0) $('#box-02').empty().prepend(`<h4><strong>${opp2.name}</strong> has been slain!</h4>`);	
+		else $('.attackButton').append(`<p><strong>${opp2.name}</strong>: has ${opp2.health} left after a ${opp1.class} special attack by ${opp1.name}.</p>`);
+};
+
+
+module.exports = {firstLetterIsVowel, splitString, rndNum, totalStats, fightFunc, calcDmg};
