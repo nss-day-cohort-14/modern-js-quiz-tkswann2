@@ -1,0 +1,122 @@
+* {
+	color: white;
+	background: black;
+}
+
+select {
+	margin: 2%;
+	background: white;
+	color: black;
+}
+ input {
+ 	margin: 2%;
+ }
+
+
+.battleground {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	text-align: center;
+}
+
+#infoSection {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+.robotBox {
+	width: 30%;
+	border: 5px dashed magenta;
+}
+
+
+/*
+  Button styles
+*/
+
+ .card__button {
+  font-size: 1.1em;
+  margin: 30px 0 0 0;
+  text-align: center;
+}
+
+.card__link span {
+	background: none; 
+}
+
+.btn {
+  text-decoration: none;
+  background-color: white;
+  color: #888;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 10px;
+  font-size: 18px;
+  text-transform: lowercase;
+  font-weight: 600;
+  padding: 10px 5px;
+  min-width: 260px;
+}
+
+.btn--orange {
+  border-color: #FF4136;
+  color: white;
+  background-color: #FF4136;
+}
+
+.btn--red {
+  border-color: #FF4136;
+  color: white;
+  background-color: green;
+}
+
+.btn--blue {
+  border-color: #0074D9;
+  color: white;
+  background-color: #0074D9;
+}
+
+.btn--yellow {
+  border-color: #E4BD00;
+  color: white;
+  background-color: #F3C500;
+}
+
+.btn--big {
+  font-size: 28px;
+  padding: 10px;
+  font-weight: 400;
+}
+
+.btn--small {
+  min-width: 50px;
+}
+
+.btn__prompt {
+  background-color: white;
+  color: #fff;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: -10px;
+  font-weight: 600;
+  background-color: #333;
+  border-radius: 5px 0 0 5px;
+  left: 37px;
+  float: left;
+}
+
+.btn__text {
+  padding: 0 50px 0 20px;
+  border-radius: 0 5px 5px 0;
+}
+
+.btn__select {
+	background-color: rgba(255,255,255,.75);
+}
+
+.upperCase {
+  text-transform: uppercase;
+ }
