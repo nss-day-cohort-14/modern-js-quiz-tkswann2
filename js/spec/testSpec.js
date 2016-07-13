@@ -14,7 +14,7 @@ const Bonus = require('../bonus');
 
 test('Robot constructor: ', function (t) {
 	let testRobot = new Robot();
-	
+
 	t.equal(typeof testRobot, 'object', 'should be a constructor object');
 	t.equal(testRobot.name, null, 'should have a name value of null');
 	t.equal(testRobot.health, 50, 'should have a base health of 50');

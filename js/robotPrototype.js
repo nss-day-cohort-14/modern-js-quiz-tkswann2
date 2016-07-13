@@ -17,13 +17,14 @@ function Robot (name) {
       this.type,
       " with ",
       this.health,
-      " health. ",
-      " Sporting a ",
-      this.weapon.weaponType,
-      " & an added ",
-      HF.splitString(this.bonus.bonusType)[1],
-      " bonus ",
-      HF.splitString(this.bonus.bonusType)[0]
+      " health. "
+      // ,
+      // " Sporting a ",
+      // this.weapon.weaponType,
+      // " & an added ",
+      // HF.splitString(this.bonus.bonusType)[1],
+      // " bonus ",
+      // HF.splitString(this.bonus.bonusType)[0]
     ].join("");
     return output;
   };
